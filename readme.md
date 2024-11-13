@@ -3,3 +3,5 @@
 [Assesment Test](AssessmentTest/AssesmentTest.md)
 
 [Chapter 1 - Building Blocks](Chapter01/Chapter01.md)
+
+[Exam Essentials](ExamEssentials/ExamEssentials.md)
