@@ -4,7 +4,9 @@
 
 [Chapter 1 - Building Blocks](Chapter01/Chapter01.md)
 
-[Exam Essentials](ExamEssentials/ExamEssentials.md)
+[Exam Essentials](ExamEssentials/Chapter01ExamEssentials)
 
 [Chapter 1 - Review Questions](Chapter01ReviewQuestions/ReviewQuestions.md)
+
+[Chapter 2 - Operators](Chapter02/Chapter02.md)
 
