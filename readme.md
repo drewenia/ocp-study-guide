@@ -12,3 +12,4 @@
 
 [Chapter 2 - Exam Essentials](ExamEssentials/Chapter02ExamEssentials.md)
 
+[Chapter 2 - Review Questions](Chapter02ReviewQuestions/ReviewQuestions.md)
