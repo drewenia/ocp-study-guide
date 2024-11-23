@@ -13,3 +13,5 @@
 [Chapter 2 - Exam Essentials](ExamEssentials/Chapter02ExamEssentials.md)
 
 [Chapter 2 - Review Questions](Chapter02ReviewQuestions/ReviewQuestions.md)
+
+[Chapter 3 - Making Decisions](Chapter03/Chapter03.md)
