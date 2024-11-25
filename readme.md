@@ -17,3 +17,5 @@
 [Chapter 3 - Making Decisions](Chapter03/Chapter03.md)
 
 [Chapter 3 - Exam Essentials](ExamEssentials/Chapter03ExamEssentials.md)
+
+[Chapter 3 - Review Questions](Chapter03ReviewQuestions/ReviewQuestions.md)
