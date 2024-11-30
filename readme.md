@@ -21,3 +21,5 @@
 [Chapter 3 - Review Questions](Chapter03ReviewQuestions/ReviewQuestions.md)
 
 [Chapter 4 - Core APIs](Chapter04/Chapter04.md)
+
+[Chapter 4 - Exam Essentials](ExamEssentials/Chapter04ExamEssentials.md)
