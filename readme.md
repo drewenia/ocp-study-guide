@@ -19,3 +19,5 @@
 [Chapter 3 - Exam Essentials](ExamEssentials/Chapter03ExamEssentials.md)
 
 [Chapter 3 - Review Questions](Chapter03ReviewQuestions/ReviewQuestions.md)
+
+[Chapter 4 - Core APIs](Chapter04/Chapter04.md)
