@@ -784,6 +784,78 @@ zincirlemesi vardır.
 "A23" döndürür. Son olarak, b bu döndürülen String'e işaret edecek şekilde değişir. 9. satır çalıştırıldığında, 'b'
 "A23" olacaktır.
 
+## Java'da == ve equals() methodlarını kullanarak String karşılaştırma arasındaki fark
+
+Java'da iki object'i karşılaştırmak için hem equals() methodu hem de == operatörü kullanılır. Java string equals()
+methodu, iki string'i karşılaştırır ve her iki string'de ki tüm karakterler eşleşiyorsa true, aksi takdirde false
+döndürür. == operatörü, aynı konuma işaret edip etmediklerine bakılmaksızın, bir heap içindeki object'lerin referansını
+veya memory location'ı karşılaştırır. new operatörünü kullanarak bir object oluşturduğumuzda, bu object için yeni bir
+memory location'ı oluşturacaktır, bu nedenle '==' bu case'de çalışmayacaktır.
+
+Örnek:
+
+```
+String s1 = "HELLO";
+String s2 = "HELLO";
+String s3 =  new String("HELLO");
+
+System.out.println(s1 == s2); // true
+System.out.println(s1 == s3); // false
+System.out.println(s1.equals(s2)); // true
+System.out.println(s1.equals(s3)); // true
+```
+
+s1 ve s2 karşılaştırması için == operatörünü kullandığımızda, her ikisi de String constant pool'unda aynı adreslere
+sahip olduğundan sonuç true.
+
+## Java'da "==" ve .equals() Arasındaki Temel Farklar
+
+Genel olarak, Java'da hem equals() hem de "==" operatörleri eşitliği kontrol etmek amacıyla object'leri karşılaştırmak
+için kullanılır, ancak ikisi arasındaki bazı farklar şunlardır:
+
+* equals() methodu ile == operatorü arasındaki temel fark, birinin bir method, diğerinin ise operator olmasıdır.
+
+* Referans karşılaştırması (adres karşılaştırması) için == operatörünü ve content (içerik) karşılaştırması için
+  equals() methodunu kullanabiliriz. Basit bir ifadeyle, == her iki object'in de aynı memory location'a işaret edip
+  etmediğini kontrol ederken, equals() object'ler de ki değerlerin karşılaştırılmasını değerlendirir.
+
+* Bir sınıf equals methodunu override ederse, varsayılan olarak bu methodu override eden en yakın parent class'ın
+  equals(Object o) methodunu kullanır.
+
+### Equality operator(==)
+
+Boolean türü de dahil olmak üzere her primitive tür için eşitlik operatörlerini uygulayabiliriz. Object türleri için de
+eşitlik operatörleri uygulayabiliriz.
+
+```
+// integer-type
+System.out.println(10 == 20); // FALSE
+
+// char-type
+System.out.println('a' == 'b'); // FALSE
+
+// char and double type
+System.out.println('a' == 97.0); // TRUE
+
+// boolean type
+System.out.println(true == true); // TRUE
+```
+
+Object türleri için == uygularsak, argüman türleri arasında uyumluluk olmalıdır (child to parent veya parent to child
+veya aynı tür). Aksi takdirde, compiler time hatası alırız.
+
+```
+Thread t = new Thread();
+Object o = new Object();
+String s = new String("GEEKS");
+
+System.out.println(t == o); // FALSE
+System.out.println(o == s); // FALSE
+
+// Uncomment to see error 
+System.out.println(t==s); // Exception - incomparable types : Thread and String
+```
+
 # Using the StringBuilder Class (StringBuilder Class'ının kullanılması)
 
 Küçük bir program, çok sayıda String nesnesi oluşturabilir. Örneğin, bu kod parçası kaç object oluşturur sizce?
@@ -1336,7 +1408,7 @@ Bu, bir referans olduğu için her çalıştırdığınızda farklı sayılar ve
 | Note : |
 |--------|
 
-Java, bir array'i güzel bir şekilde yazdıran bir metod sağlar: Arrays.toString(bugs) [cricket, beetle, ladybug] olarak
+Java, bir array'i güzel bir şekilde yazdıran bir method sağlar: Arrays.toString(bugs) [cricket, beetle, ladybug] olarak
 yazdırır.
 
 Figure 4.6'yı anladığınızdan emin olun. Array, String object'leri için alan tahsis etmez. Bunun yerine, object'lerin
@@ -2065,7 +2137,7 @@ Dört sınıfın her birinde, geçerli tarih ve saati veren now() adında bir st
 sadece bir time içerir ve date bilgisi yoktur. Time, hour, minutes, seconds ve fractional (kesirli) second'ları
 gösterir. Üçüncü satır hem bir date hem de bir time içerir. LocalDateTime'ı bir String'e dönüştürürken, date ve
 time'ı ayırmak için 'T' kullanılır. Son olarak, dördüncü satır time-zone offsetini ve time-zone'u ekler. Istanbul,
-Greenwich Mean Time (Ortalama Zaman) ından (GMT) dört zaman dilimi uzaklıktadır.
+Greenwich Mean Time (Ortalama Zaman) ından (GMT) üç zaman dilimi uzaklıktadır.
 
 ```
 021–10–25T09:13:07.769–05:00[America/New_York]
